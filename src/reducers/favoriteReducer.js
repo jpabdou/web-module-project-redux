@@ -15,10 +15,16 @@ const favoriteReducer = (state = initialState, action) => {
                 favorites: result
             }
         case ADD_FAVORITE:
-            return {
-                ...state,
-                favorites: [...state.favorites, action.payload]
+            const search= state.favorites.filter(item=>(action.payload.id === item.id))
+            if (!search.length) {
+                return {
+                    ...state,
+                    favorites: [...state.favorites, action.payload]
+                }
+            } else {
+                return state
             }
+
         case TOGGLE_FAVORITES:
             return {
                 ...state,
