@@ -2,7 +2,7 @@
   "name": "codegraded-project-react",
   "version": "0.0.1",
   "main": "index.js",
-  "homepage": "https://gitname.github.io/react-gh-pages",
+  "homepage": "https://jpabdou.github.io/web-module-project-redux",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
