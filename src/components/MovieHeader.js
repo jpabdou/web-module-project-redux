@@ -10,7 +10,7 @@ const MovieHeader = (props) => {
     return(<div className="table-title">
         <div className="row">
         <div className="col-sm-6">
-            <h2>{appTitle}</h2>
+            <Link to="/movies"><h2>{appTitle}</h2></Link>
         </div>
         <div className="col-sm-6 headerBar">
             <div className="btn btn-sm btn-primary" onClick={()=>props.toggleFavorites()}><span>{ props.displayFavorites ? "Hide" : "Show"} Favorites</span></div>
@@ -24,8 +24,6 @@ const mapStateToProps = state => {
     return {
         appTitle: state.movies.appTitle,
         displayFavorites: state.favorites.displayFavorites
-    //   movies: state.movieList.movies,
-    //   appTitle: state.movieList.appTitle
     }
   }
 
