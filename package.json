@@ -6,9 +6,9 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "webpack serve --open",
+    "start": "webpack serve --open --config webpack.dev.js",
     "test": "cross-env NODE_ENV=testing jest --verbose --forceExit",
-    "build": "webpack"
+    "build": "webpack --config webpack.prod.js"
   },
   "devDependencies": {
     "@babel/core": "7.16.0",
@@ -34,7 +34,8 @@
     "nodemon": "2.0.14",
     "webpack": "5.62.1",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "4.4.0"
+    "webpack-dev-server": "4.4.0",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
     "@testing-library/user-event": "13.5.0",
