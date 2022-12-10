@@ -5,7 +5,7 @@
   "homepage": "https://jpabdou.github.io/web-module-project-redux",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "start": "webpack serve --open --config webpack.dev.js",
     "test": "cross-env NODE_ENV=testing jest --verbose --forceExit",
     "build": "webpack --config webpack.prod.js"
