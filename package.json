@@ -2,7 +2,10 @@
   "name": "codegraded-project-react",
   "version": "0.0.1",
   "main": "index.js",
+  "homepage": "https://gitname.github.io/react-gh-pages",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "webpack serve --open",
     "test": "cross-env NODE_ENV=testing jest --verbose --forceExit"
   },
